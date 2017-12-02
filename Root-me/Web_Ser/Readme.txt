@@ -57,5 +57,26 @@ change into: http://challenge01.root-me.org/web-serveur/ch52/?url=https://google
 	>>>Gg9LRz-hWSxqqUKd77-_q-6G8
 
 
+14. File upload - MIME type: use burp: the chall is only allow you to upload image file
+		try up a shell.php file and see burp: <FU_1>
+		It will check your file before upload  <content-type>
+		use burp and change content-type to: image/jpeg >>>File uploaded <FU_2>
+		get flag: ?command=cat ../../../.passwd <FU_FLAG>
+	>>>a7n4nizpgQgnPERy89uanf6T4
+
+
+15. HTTP cookies: use edit this cookie to change value cookie : admin and F5
+	>>>ml-SYMPA
+
+
+16.	Directory traversal: http://challenge01.root-me.org/web-serveur/ch15/ch15.php?galerie
+						 http://challenge01.root-me.org/web-serveur/ch15/galerie/86hwnX2r
+						 http://challenge01.root-me.org/web-serveur/ch15/galerie/86hwnX2r/password.txt
+	>>>kcb$!Bx@v4Gs9Ez
+
+
+
+
+
 
 

@@ -1,0 +1,18 @@
+wfuzz
+test
+robots.txt
+about.php
+redir.php
+test1.txt
+test2.txt
+admin
+Admin
+index.php
+cat.txt
+index.txt
+cat.php
+dcm.txt
+cat index.txt
+password.txt
+password
+.passwd
